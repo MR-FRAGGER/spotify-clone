@@ -1,0 +1,174 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    rgb(37, 38, 40) 12%,
+    rgb(33, 34, 36) 19%,
+    rgb(18, 19, 20) 37%
+  );
+  height: 100vh;
+  color: white;
+}
+.container-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  gap: 5%;
+}
+
+.container-right > .popular-artists {
+  margin-left: 2%;
+  height: 380px;
+  display: block;
+}
+.popular-artists > .heading {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popular-artists > .artists {
+  display: flex;
+  width: 98%;
+}
+
+.artist {
+  padding: 1%;
+  display: grid;
+  grid-template-columns: auto;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.artist > p,
+.artist > h2 {
+  width: 80%;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.artist > h2 {
+  margin-top: 5%;
+  font-size: larger;
+  font-weight: 600;
+}
+.artist > p {
+  margin-top: -5%;
+  font-size: 12px;
+  font-weight: 600;
+}
+.artist::after {
+  background-image: url(images/play-button.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: " ";
+  width: 50px;
+  height: 50px;
+  margin-top: 70%;
+  margin-left: 70%;
+  border-radius: 50px;
+  background-color: green;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(10px);
+  transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.artist:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+.artist:hover {
+  background-color: rgb(37, 38, 40);
+  border-radius: 10px;
+}
+.artist > img {
+  width: 207px;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container-right > .popular-albums {
+  margin-left: 2%;
+  height: 380px;
+  display: block;
+}
+.popular-albums > .heading {
+  width: 98%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popular-albums > .albums {
+  display: flex;
+  width: 98%;
+  gap: 5px;
+}
+.album {
+  padding: 1%;
+  display: grid;
+  grid-template-columns: auto;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.album > p,
+.album > h2 {
+  width: 80%;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.album > h2 {
+  margin-top: 5%;
+  font-size: larger;
+  font-weight: 600;
+}
+.album > p {
+  margin-top: -5%;
+  font-size: 12px;
+  font-weight: 600;
+}
+.album::after {
+  background-image: url(images/play-button.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: " ";
+  width: 50px;
+  height: 50px;
+  margin-top: 70%;
+  margin-left: 70%;
+  border-radius: 50px;
+  background-color: green;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(10px);
+  transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.album:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+.album:hover {
+  background-color: rgb(37, 38, 40);
+  border-radius: 10px;
+}
+.album > img {
+  width: 203px;
+  height: 203px;
+  object-fit: cover;
+}
